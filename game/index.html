@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>凪ノ家の十二通</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="game">
+  <!-- 画面レイヤー -->
+  <div id="layer-bg" class="layer"><div class="ph-label" id="bg-label"></div></div>
+  <div id="layer-chars" class="layer"></div>
+  <div id="layer-still" class="layer hidden"><div class="ph-label" id="still-label"></div></div>
+  <div id="layer-fx" class="layer"></div>
+
+  <!-- テキストウィンドウ -->
+  <div id="textbox">
+    <div id="namebox"></div>
+    <div id="text"></div>
+    <div id="next-mark">▼</div>
+  </div>
+  <div id="letterbox" class="hidden"><div id="letter-text"></div><div class="next-mark-letter">▼</div></div>
+
+  <!-- 選択肢 -->
+  <div id="choices" class="hidden"></div>
+
+  <!-- クイックメニュー -->
+  <div id="quickmenu">
+    <button data-act="qsave">Qセーブ</button>
+    <button data-act="qload">Qロード</button>
+    <button data-act="save">セーブ</button>
+    <button data-act="load">ロード</button>
+    <button data-act="log">ログ</button>
+    <button data-act="auto" id="btn-auto">オート</button>
+    <button data-act="skip" id="btn-skip">スキップ</button>
+    <button data-act="hint">ヒント帳</button>
+    <button data-act="config">設定</button>
+    <button data-act="hide">✕</button>
+    <button data-act="title">タイトル</button>
+  </div>
+  <div id="mode-indicator"></div>
+
+  <!-- 章タイトル・エンディングカード -->
+  <div id="card" class="hidden"><div id="card-sub"></div><div id="card-title"></div><div id="card-note"></div></div>
+
+  <!-- オーバーレイ画面(タイトル/各メニュー) -->
+  <div id="overlay" class="hidden"></div>
+  <div id="toast" class="hidden"></div>
+</div>
+
+<!-- データ -->
+<script src="js/core.js"></script>
+<script src="data/characters.js"></script>
+<script src="data/manifest.js"></script>
+<script src="data/flags.js"></script>
+<script src="data/endings.js"></script>
+<!-- シナリオ(読み込み順＝パース順) -->
+<script src="scenario/00_prologue.js"></script>
+<script src="scenario/01_april.js"></script>
+<script src="scenario/02_may.js"></script>
+<script src="scenario/03_june.js"></script>
+<script src="scenario/04_july.js"></script>
+<script src="scenario/05_august.js"></script>
+<script src="scenario/06_september.js"></script>
+<script src="scenario/07_october.js"></script>
+<script src="scenario/08_november.js"></script>
+<script src="scenario/09_shared_winter.js"></script>
+<script src="scenario/10_route_reny.js"></script>
+<script src="scenario/11_route_hyu.js"></script>
+<script src="scenario/12_route_jin.js"></script>
+<script src="scenario/13_route_gel.js"></script>
+<script src="scenario/14_route_neo.js"></script>
+<script src="scenario/15_route_muni.js"></script>
+<script src="scenario/16_triangles.js"></script>
+<script src="scenario/17_fire_and_letter.js"></script>
+<script src="scenario/18_endings_a.js"></script>
+<script src="scenario/19_endings_b.js"></script>
+<script src="js/engine.js"></script>
+</body>
+</html>
